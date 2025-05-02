@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [Value, setValue] = useState({
@@ -147,9 +147,9 @@ const Signup = () => {
           <p className="text-white text-center pt-2 text-xl">Or</p>
           <p className="text-zinc-400 mt-0.5 text-center">
             Already have an account?{" "}
-            <a href="/login" className="border-b-2 border-zinc-700">
+            <NavLink to="/login" className="border-b-2 border-zinc-700">
               Login
-            </a>
+            </NavLink>
           </p>
         </div>
       </div>

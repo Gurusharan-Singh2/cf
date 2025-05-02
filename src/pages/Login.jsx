@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { authActions } from "../store/auth";
 import { useDispatch } from "react-redux";
 
@@ -69,7 +69,7 @@ const Login = () => {
         
         <input type="submit" value="Login" className="bg-primary font-semibold w-full text-white rounded-xl py-3 mt-2 cursor-pointer hover:bg-opacity-80 transition" onClick={submit} />
         <p className='text-white  text-center pt-2 text-xl' >Or</p>
-        <p className='text-zinc-400 mt-0.5 text-center'>Already have an account? <a href="/signup" className='border-b-2 border-zinc-700'>Sign Up</a></p>
+        <p className='text-zinc-400 mt-0.5 text-center'>Already have an account? <NavLink to="/signup" className='border-b-2 border-zinc-700'>Sign Up</NavLink></p>
       </div>
     </div>
   </>
